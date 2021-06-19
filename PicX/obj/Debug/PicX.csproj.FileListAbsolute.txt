@@ -1,0 +1,5 @@
+C:\Users\Prantik\documents\visual studio 2010\Projects\PicX\PicX\bin\PicX.dll
+C:\Users\Prantik\documents\visual studio 2010\Projects\PicX\PicX\bin\PicX.pdb
+C:\Users\Prantik\documents\visual studio 2010\Projects\PicX\PicX\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Prantik\documents\visual studio 2010\Projects\PicX\PicX\obj\Debug\PicX.dll
+C:\Users\Prantik\documents\visual studio 2010\Projects\PicX\PicX\obj\Debug\PicX.pdb

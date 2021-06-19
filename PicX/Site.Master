@@ -1,0 +1,171 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PicX.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<link rel="stylesheet" type="text/css" href="mystyle.css"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style3
+        {
+            font-size: large;
+            font-family: Constantia;
+        }
+        .style5
+        {
+            font-size: xx-large;
+        }
+        .style7
+        {
+            font-size: xx-large;
+            font-family: Constantia;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header">
+
+        
+        <asp:Image ID="Image1" runat="server" Height="106px" 
+            ImageUrl="http://oi66.tinypic.com/2vmx16s.jpg" Width="129px" />
+
+        
+    </div>
+
+    <div id="nav" style="background-color: #FFFFCC">
+
+    
+        <asp:Button ID="btn_home" runat="server" Height="60px" Text="Home" 
+            Width="129px" class="myButton" onclick="btn_home_Click"/>
+        <asp:Button ID="btn_register" runat="server" Height="60px" Text="Register" 
+            Width="141px" class="myButton" onclick="btn_register_Click" />
+        <asp:Button ID="btn_contact" runat="server" Height="60px" Text="Contact" 
+            Width="129px" class="myButton" onclick="btn_contact_Click" />
+        <asp:Button ID="btn_aboutus" runat="server" Height="60px" Text="About Us" 
+            Width="151px" class="myButton" onclick="btn_aboutus_Click" />
+
+    
+    </div>
+
+    <div id="content">
+    
+    
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
+        </asp:ContentPlaceHolder>
+    
+    
+    </div>
+    <div id="aside">
+    
+    
+        <asp:MultiView ID="MultiView_login" runat="server" 
+            onactiveviewchanged="MultiView_login_ActiveViewChanged">
+            <asp:View ID="View_login" runat="server">
+
+
+                <span class="style7">
+                <br /><u>
+                LOGIN TO YOUR ACCOUNT</u><br />
+                <br />
+                <asp:Label ID="Label1" runat="server" style="font-size: medium" 
+                    Text="Username:"></asp:Label>
+                &nbsp;&nbsp;&nbsp;
+                
+                <asp:TextBox ID="tb_uname" runat="server" Width="190px"></asp:TextBox>
+                </span><span class="style7">
+                <br />
+                <br />
+                <asp:Label ID="Label2" runat="server" style="font-size: medium" 
+                    Text="Password: "></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp; </span><span >
+                <asp:TextBox ID="tb_pw" runat="server" Width="190px" TextMode="Password"></asp:TextBox>
+                </span><span class="style7">
+                <br />
+                <br />
+                
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button1" runat="server" Height="42px" onclick="Button1_Click" 
+                    Text="Login" Width="91px" class="insideButton" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lbl_loginerror" runat="server" 
+                    style="font-size: medium; color: #FF6600" Text="Label"></asp:Label>
+                <br />
+                <span class="style7">
+                <asp:HyperLink ID="forgotpw" runat="server" Font-Italic="True" 
+                    ForeColor="#FF6666" style="font-size: medium" 
+                    NavigateUrl="~/forgotpassword.aspx">Forgot password?</asp:HyperLink>
+                <br />
+                <br />
+                <br />
+                </span></span><span class="style3">
+                New User?&nbsp;&nbsp;
+                </span>
+                <asp:HyperLink ID="registerehere" runat="server" Font-Italic="True" 
+                    Font-Underline="True" ForeColor="Maroon" style="" 
+                    NavigateUrl="~/Register.aspx">Register Here</asp:HyperLink>
+                
+
+
+            </asp:View>
+
+           
+            <asp:View ID="View_loggedin" runat="server">
+                <p>
+                    <span class="style5">Welcome&nbsp; </span><asp:Label 
+                        ID="lbl_wc" runat="server" Font-Size="XX-Large" Text="Label"></asp:Label>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </p>
+
+                 <ul>
+<li>
+<h4><span style="text-decoration: underline;"><a href="ViewPhotos.aspx">View Photos</a></span></h4>
+</li>
+<li>
+<h4><span style="text-decoration: underline;"><a href="upload.aspx">Upload New Photos</a></span></h4>
+</li>
+<li>
+<h4><span style="text-decoration: underline;"><a href="Createalbum.aspx">Create New Album</a></span></h4>
+</li>
+<li>
+<h4><span style="text-decoration: underline;"><a href="https://www.w3schools.com/html/">Photo Sharing</a></span></h4>
+</li>
+<li>
+<h4><span style="text-decoration: underline;"><a href="https://www.w3schools.com/html/">My Profile</a></span></h4>
+</li>
+<li>
+<h4><span style="text-decoration: underline;"><a href="https://www.w3schools.com/html/">Change Password</a></span></h4>
+</li>
+<li>
+<h4><span style="text-decoration: underline;"><a href="Loggedout.aspx">Logout</a></span></h4>
+</li>
+</ul>
+
+
+            </asp:View>
+
+           
+        </asp:MultiView>
+    
+    
+    </div>
+
+    
+
+
+    <div id="footer" style="font-size: large; color: #FF0000; text-decoration: underline">
+    <center> Copyright 2017</center>
+    </div>
+
+    </form>
+</body>
+</html>
