@@ -1,2 +1,2 @@
 # PicX
-Human Resources Management System is a management function that helps manager to recruit, select, train and develop members for an organization. HRMS is concerned with the people’s dimension in organization.
+PicX is an online photo upload and sharing portal where users can sign up and upload and share photos with other members.
